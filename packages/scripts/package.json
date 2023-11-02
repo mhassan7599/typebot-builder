@@ -1,0 +1,41 @@
+{
+  "name": "@typebot.io/scripts",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "AGPL-3.0-or-later",
+  "private": true,
+  "scripts": {
+    "playground": "SKIP_ENV_CHECK=true dotenv -e ./.env.local -- tsx playground.ts",
+    "db:cleanDatabase": "tsx cleanDatabase.ts",
+    "db:backup": "tsx backupDatabase.ts",
+    "db:restore": "tsx restoreDatabase.ts",
+    "db:setCustomPlan": "tsx setCustomPlan.ts",
+    "db:bulkUpdate": "tsx bulkUpdate.ts",
+    "db:fixTypebots": "tsx fixTypebots.ts",
+    "checkAndReportChatsUsage": "tsx checkAndReportChatsUsage.ts",
+    "inspectUser": "tsx inspectUser.ts",
+    "checkSubscriptionsStatus": "tsx checkSubscriptionsStatus.ts",
+    "createChatsPrices": "tsx createChatsPrices.ts",
+    "migrateSubscriptionsToUsageBased": "tsx migrateSubscriptionsToUsageBased.ts",
+    "importContactToBrevo": "tsx importContactToBrevo.ts",
+    "getUsage": "tsx getUsage.ts"
+  },
+  "devDependencies": {
+    "@typebot.io/emails": "workspace:*",
+    "@typebot.io/lib": "workspace:*",
+    "@typebot.io/prisma": "workspace:*",
+    "@typebot.io/schemas": "workspace:*",
+    "@types/node": "20.4.2",
+    "@types/prompts": "2.4.4",
+    "deep-object-diff": "1.1.9",
+    "got": "12.6.0",
+    "prompts": "2.4.2",
+    "stripe": "12.13.0",
+    "tsx": "3.12.7",
+    "typescript": "5.1.6",
+    "zod": "3.21.4"
+  },
+  "dependencies": {
+    "@paralleldrive/cuid2": "2.2.1"
+  }
+}
